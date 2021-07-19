@@ -6,3 +6,5 @@ TO run this file you will need to download the yolov3.weights file as it is not 
 also you need to specify the location of coco.names and yolov3.weight and yolov3.cfg file in your code
 
 
+SmallerCodes Folder has all the minor codes that i tried before integrating them to final model .
+ for example how to take images from camera in a interval etc
