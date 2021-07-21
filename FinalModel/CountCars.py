@@ -7,10 +7,10 @@ def count():
     
     # Loading Yolo
     
-    net = cv2.dnn.readNet("yolov3.weights", "yolov3.cfg") #specify the path for weight and cfg file
+    net = cv2.dnn.readNet("Traffic_Management_system_intersection_IEEE\FinalModel\yolov3.weights", "Traffic_Management_system_intersection_IEEE\FinalModel\yolov3.cfg") #specify the path for weight and cfg file
     classes = []                                                                   #for stroing various things yolo can detect
 
-    with open("coco.names", "r") as namef: #extracting name of various oject yolo can detect from its coco.name file
+    with open("Traffic_Management_system_intersection_IEEE\FinalModel\coco.names", "r") as namef: #extracting name of various oject yolo can detect from its coco.name file
         classes = [line.strip() for line in namef.readlines()]                     #classes is storing all the various classes yolo can detect
     
     layer_names = net.getLayerNames()                     #It gives you list of all layers used in a network. yolo v3 has 250
@@ -24,9 +24,9 @@ def count():
 
     ret, img = cp.read()                                  #"Frame" will get the next frame in the camera while "Ret" will obtain return value from getting the camera frame, either true of false.
 
-    cv2.imwrite('D:\CODING\Trafficmanagement\FinalModel\clicked'+str(imnum)+'.png', img) #storing this image
+    cv2.imwrite('Traffic_Management_system_intersection_IEEE\FinalModel\clicked'+str(imnum)+'.png', img) #storing this image
 
-    img = cv2.imread('D:\CODING\Trafficmanagement\FinalModel\clicked'+str(imnum)+'.png') #using this image
+    img = cv2.imread('Traffic_Management_system_intersection_IEEE\FinalModel\clicked'+str(imnum)+'.png') #using this image
     imnum=imnum+1                                         #incrementing this so next image will be called clicked n+1
     
     img = cv2.resize(img, None, fx=0.4, fy=0.4)           #resizing image as per our use
