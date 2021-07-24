@@ -1,7 +1,7 @@
 import cv2
 import dlib
 
-captured_vid = cv2.VideoCapture('D:\CODING\Trafficmanagement\YOLO car counter\highway.mp4') #to capture the video
+captured_vid = cv2.VideoCapture('Traffic_Management_system_intersection_IEEE\SmallerCodes\highway.mp4') #to capture the video
 
 def findCenter(x,y,w,h):
     cx = int((x+w)/2)
