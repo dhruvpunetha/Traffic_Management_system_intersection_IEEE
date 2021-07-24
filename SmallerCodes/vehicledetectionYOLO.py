@@ -2,9 +2,9 @@ import cv2
 import time
 import numpy as np
 # Load Yolo
-net = cv2.dnn.readNet("D:\CODING\Trafficmanagement\myYOLOMODEL\yolov3.weights", "D:\CODING\Trafficmanagement\myYOLOMODEL\yolov3.cfg") #specify the path for weight and cfg file
+net = cv2.dnn.readNet("Traffic_Management_system_intersection_IEEE\YOLOv3files\yolov3.weights", "Traffic_Management_system_intersection_IEEE\YOLOv3files\yolov3.cfg") #specify the path for weight and cfg file
 classes = []
-with open("D:\CODING\Trafficmanagement\myYOLOMODEL\coco.names", "r") as f:
+with open("Traffic_Management_system_intersection_IEEE\YOLOv3files\coco.names", "r") as f:
     classes = [line.strip() for line in f.readlines()]
 
 layer_names = net.getLayerNames()
