@@ -27,8 +27,8 @@ while True:
         ret, img = cp.read()
         cv2.imshow('clicked image', img)
         cv2.waitKey(2000)
-        cv2.imwrite('D:\CODING\Trafficmanagement\SmallerCodes\clicked'+str(imnum)+'.png', img)
-        im = cv2.imread('D:\CODING\Trafficmanagement\SmallerCodes\clicked'+str(imnum)+'.png')
+        cv2.imwrite('Traffic_Management_system_intersection_IEEE\SmallerCodes\clicked'+str(imnum)+'.png', img)
+        im = cv2.imread('Traffic_Management_system_intersection_IEEE\SmallerCodes\clicked'+str(imnum)+'.png')
         imnum=imnum+1
         
         bbox, label, conf = cv.detect_common_objects(im)
